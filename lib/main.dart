@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             )),
         themedWidgetBuilder: (context, theme) {
           return MaterialApp(
-            title: 'Personal Expenses',
+            title: 'Minhas despesas',
             theme: theme,
             home: MyHomePage(),
           );
@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
             middle: Text(
-              'Personal Expenses',
+              'Minhas despesas',
             ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
@@ -162,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         : AppBar(
             title: Text(
-              'Personal Expenses',
+              'Minhas despesas',
             ),
             actions: <Widget>[
               IconButton(
