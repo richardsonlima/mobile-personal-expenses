@@ -73,7 +73,7 @@ class _NewTransactionState extends State<NewTransaction> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: InputDecoration(labelText: 'Despesa'),
                 controller: _titleController,
                 onSubmitted: (_) => _submitData(),
                 // onChanged: (val) {
@@ -81,7 +81,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 // },
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: InputDecoration(labelText: 'Valor'),
                 controller: _amountController,
                 keyboardType: TextInputType.number,
                 onSubmitted: (_) => _submitData(),
@@ -94,12 +94,12 @@ class _NewTransactionState extends State<NewTransaction> {
                     Expanded(
                       child: Text(
                         _selectedDate == null
-                            ? 'No Date Chosen!'
-                            : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
+                            ? 'Dia nao selecionado!'
+                            : 'Dia escolhido: ${DateFormat.yMd().format(_selectedDate)}',
                       ),
                     ),
                     AdaptiveFlatButton(
-                      text: 'Choose Date',
+                      text: 'Selecione o dia',
                       handler: _presentDatePicker,
                     )
                   ],
@@ -107,13 +107,13 @@ class _NewTransactionState extends State<NewTransaction> {
               ),
               Platform.isIOS
                   ? CupertinoButton(
-                      child: Text('Add Transaction'),
+                      child: Text('Adicionar despesa'),
                       color: Theme.of(context).primaryColor,
                       // textColor: Theme.of(context).textTheme.button.color,
                       onPressed: _submitData,
                     )
                   : RaisedButton(
-                      child: Text('Add Transaction'),
+                      child: Text('Adicionar despesa'),
                       color: Theme.of(context).primaryColor,
                       textColor: Theme.of(context).textTheme.button.color,
                       onPressed: _submitData,

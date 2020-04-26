@@ -18,7 +18,7 @@ class TransactionList extends StatelessWidget {
                 return Column(
                   children: <Widget>[
                     Text(
-                      'No transactions added yet!',
+                      'Nenhuma despesa foi adicionada ate agora!',
                       style: Theme.of(context).textTheme.title,
                     ),
                     SizedBox(
@@ -62,7 +62,7 @@ class TransactionList extends StatelessWidget {
                     trailing: MediaQuery.of(context).size.width > 460
                         ? FlatButton.icon(
                             icon: Icon(Icons.delete),
-                            label: Text('Delete'),
+                            label: Text('Deletar'),
                             textColor: Theme.of(context).errorColor,
                             onPressed: () => deleteTx(transactions[index].id),
                           )
